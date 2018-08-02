@@ -13,9 +13,9 @@ import org.openjdk.jmh.annotations.Threads;
 @Threads(5)
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MICROSECONDS)
-public class LandscapeWaterCalculatorImplArraysBenchmark {
+public class LandscapeWaterCalculatorImplSetBenchmark {
 
-  private final static LandscapeWaterCalculator calculator = new LandscapeWaterCalculatorImplArrays();
+  private final static LandscapeWaterCalculator calculator = new LandscapeWaterCalculatorImplSet();
 
   @Benchmark
   public void calculateWaterAmount_giant() {
