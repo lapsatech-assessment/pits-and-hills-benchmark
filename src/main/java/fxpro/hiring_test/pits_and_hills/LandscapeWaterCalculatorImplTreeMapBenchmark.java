@@ -9,13 +9,13 @@ import org.openjdk.jmh.annotations.Mode;
 import org.openjdk.jmh.annotations.OutputTimeUnit;
 import org.openjdk.jmh.annotations.Threads;
 
-@Fork(value = 5, warmups = 1)
-@Threads(5)
+@Fork(value = 1, warmups = 1)
+@Threads(1)
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MICROSECONDS)
-public class LandscapeWaterCalculatorImplSetBenchmark {
+public class LandscapeWaterCalculatorImplTreeMapBenchmark {
 
-  private final static LandscapeWaterCalculator calculator = new LandscapeWaterCalculatorImplSet();
+  private final static LandscapeWaterCalculator calculator = new LandscapeWaterCalculatorImplTreeMap();
 
   @Benchmark
   public void calculateWaterAmount_giant() {
